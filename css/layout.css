@@ -1,0 +1,115 @@
+@charset "UTF-8";
+body {
+  font-family: "Roboto", "Noto Sans KR", "돋움";
+  color: #111;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  vertical-align: top;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.container {
+  width: 1460px;
+  margin: 0 auto;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+}
+#header .container {
+  width: 1840px;
+  display: flex;
+  justify-content: space-between;
+}
+#header #logo img {
+  width: 200px;
+}
+#header #gnb .list {
+  display: flex;
+}
+#header #gnb .list > li {
+  position: relative;
+}
+#header #gnb .list > li:hover .depth01 {
+  background-color: #0467b3;
+}
+#header #gnb .list > li:hover .depth01:after {
+  transform: scaleX(1);
+}
+#header #gnb .list > li:hover .depth01:before {
+  opacity: 1;
+}
+#header #gnb .list > li:hover .depth02 {
+  opacity: 1;
+  pointer-events: auto;
+}
+#header #gnb .list .depth01 {
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+  height: 120px;
+  padding: 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease;
+}
+#header #gnb .list .depth01:before {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: #ffc240;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+}
+#header #gnb .list .depth01:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 30px;
+  right: 30px;
+  height: 2px;
+  background-color: #fff;
+  bottom: 0;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+}
+#header #gnb .list .depth02 {
+  text-align: center;
+  color: #fff;
+  padding: 25px 0 30px;
+  background-color: #0467b3;
+  font-size: 14px;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.25s ease;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+#header #gnb .list .depth02 li {
+  opacity: 0.5;
+  transition: all 0.25s ease;
+}
+#header #gnb .list .depth02 li:hover {
+  opacity: 1;
+}
+#header #gnb .list .depth02 li a {
+  display: block;
+  padding: 15px 0;
+}
