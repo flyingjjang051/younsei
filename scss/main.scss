@@ -56,5 +56,22 @@
         }
       }
     }
+    .news {
+      margin-top: 200px;
+      width: 350px;
+      word-break: keep-all;
+      h3 {
+        font-size: $h3;
+        border-bottom: 1px solid #fff;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+      }
+      .desc {
+        line-height: 1.5;
+        br {
+          content: "";
+        }
+      }
+    }
   }
 }

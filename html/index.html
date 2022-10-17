@@ -104,6 +104,37 @@
             COLLEGE OF SCIENCE
           </div>
           <div class="pagination"></div>
+          <div class="news">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="">
+                  <h3 class="main">2021학년도 이과대학 학부 우수강의 교수상 시상</h3>
+                  <div class="desc">
+                    2022년 3월 7일과 2022년 3월 10일에 이과대학 회의실에서 <br />
+                    학부 우수강의 교수상 시상식을 진행하였습니다.
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <h3 class="main">2021학년도 문과대학 학부 우수강의 교수상 시상</h3>
+                  <div class="desc">
+                    2022년 3월 7일과 2022년 3월 10일에 이과대학 회의실에서 <br />
+                    학부 우수강의 교수상 시상식을 진행하였습니다.
+                  </div>
+                </a>
+              </li>
+              <li class="swiper-slide">
+                <a href="">
+                  <h3 class="main">2021학년도 의과대학 학부 우수강의 교수상 시상</h3>
+                  <div class="desc">
+                    2022년 3월 7일과 2022년 3월 10일에 이과대학 회의실에서 <br />
+                    학부 우수강의 교수상 시상식을 진행하였습니다.
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -112,13 +143,26 @@
 
     <script>
       Splitting();
-
+      const newsSlider = new Swiper("#main-visual .news", {
+        loop: true,
+        effect: "fade",
+        fadeEffect: {
+          crossFade: true,
+        },
+        pagination: {
+          el: "#main-visual .pagination",
+          clickable: true,
+        },
+      });
       new Swiper("#main-visual .mask", {
         loop: true,
         effect: "fade",
         pagination: {
           el: "#main-visual .pagination",
           clickable: true,
+        },
+        controller: {
+          control: newsSlider,
         },
       });
 
