@@ -17,6 +17,7 @@ button {
   background: none;
   border: none;
   outline: none;
+  color: inherit;
 }
 .container {
   width: 1460px;
@@ -25,12 +26,18 @@ button {
 #header {
   position: absolute;
   width: 100%;
+  z-index: 99;
+  top: 0;
   .container {
     width: 1840px;
     display: flex;
+    align-items: flex-start;
     justify-content: space-between;
   }
   #logo {
+    display: flex;
+    align-items: center;
+    height: 120px;
     img {
       width: 200px;
     }
@@ -111,6 +118,63 @@ button {
           }
         }
       }
+    }
+  }
+  .util {
+    display: flex;
+    align-items: center;
+    height: 120px;
+    .language {
+      padding: 15px;
+      text-align: center;
+      border-radius: 10px;
+      background-color: #ccc;
+      transition: all 0.25s ease;
+      position: relative;
+      &:hover {
+        background-color: $main-color;
+        color: #fff;
+        ul {
+          opacity: 1;
+          top: 60px;
+        }
+      }
+      ul {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        background-color: $main-color;
+        left: 0;
+        top: 80px;
+        border-radius: 10px;
+        padding: 10px 0;
+        color: #fff;
+        transition: all 0.25s ease;
+        li a {
+          display: block;
+          padding: 10px 0;
+          text-transform: uppercase;
+          font-weight: 700;
+        }
+      }
+      button {
+        text-transform: uppercase;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        &:before {
+          content: "\e894";
+          font-family: "Material Icons";
+          font-size: 24px;
+          font-weight: 400;
+          margin-right: 10px;
+        }
+      }
+    }
+    .all-menu {
+      font-size: 24px;
+      margin-left: 40px;
     }
   }
 }
