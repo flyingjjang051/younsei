@@ -15,6 +15,9 @@
     bottom: 0;
     overflow: hidden;
     border-radius: 100px 0 0 0;
+    .main-mask {
+      height: 100%;
+    }
     li {
       height: 100%;
       width: 100%;
@@ -31,17 +34,20 @@
       background-image: url("../images/main/history_img2.jpg");
     }
   }
-  .contents {
+  > .contents {
     color: #fff;
     //margin-top: 500px; // 만약 부모의 첫번째 자식요소가  margin을 가지면 여백을 생성시킨다. 이때 부모에게 overflow:hidden을 주면 원상 복구된다.
     position: absolute;
     bottom: 150px;
     width: 100%;
     z-index: 2;
+    user-select: none;
     .title {
       font-size: 68px;
       font-weight: 900;
       text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1);
+      user-select: none;
+      pointer-events: none;
     }
     .pagination {
       margin-top: 50px;
@@ -56,8 +62,12 @@
         }
       }
     }
-    .news {
+    .news-and-notice {
       margin-top: 200px;
+      display: flex;
+      justify-content: space-between;
+    }
+    .news {
       width: 350px;
       word-break: keep-all;
       h3 {
@@ -70,6 +80,63 @@
         line-height: 1.5;
         br {
           content: "";
+        }
+      }
+    }
+    .notice {
+      width: 820px;
+      .title-box {
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        h2 {
+          font-size: 24px;
+          font-weight: 500;
+          text-transform: uppercase;
+        }
+      }
+      .contents {
+        background-color: #fff;
+        color: #111;
+        padding: 20px;
+        position: relative;
+        li {
+          display: flex;
+          align-items: center;
+        }
+        .date {
+          width: 80px;
+          height: 80px;
+          background-color: $point-color;
+          margin-right: 30px;
+          color: #fff;
+          font-weight: 700;
+          text-align: center;
+          flex-direction: column;
+          @include flex;
+          @include longShadow(50, darken($point-color, 30));
+          overflow: hidden;
+          .num {
+            display: block;
+            font-size: 48px;
+          }
+        }
+        .txt {
+          h3 {
+            font-size: $h3 - 2px;
+            margin-bottom: 10px;
+          }
+        }
+        .btns {
+          position: absolute;
+          right: 30px;
+          top: 50%;
+          transform: translateY(-50%);
+          z-index: 2;
+          i {
+            font-size: 20px;
+          }
         }
       }
     }
