@@ -137,3 +137,14 @@
 #main-visual > .contents .notice .contents .btns i {
   font-size: 20px;
 }
+#main-visual > .contents .notice .contents .fraction-pagination {
+  position: absolute;
+  left: auto;
+  right: 120px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: auto;
+  bottom: auto;
+  font-size: 20px;
+  font-weight: 700;
+}
