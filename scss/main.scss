@@ -157,9 +157,11 @@
 }
 
 .section {
+  padding: 200px 0;
   .title-box {
     h2 {
-      font-size: $h2;
+      font-size: $h2 - 4px;
+      margin-bottom: 30px;
       strong {
         font-weight: 700;
       }
@@ -167,6 +169,9 @@
     p {
       font-size: 17px;
       color: #666;
+      word-break: keep-all;
+      margin-bottom: 30px;
+      line-height: 1.5;
     }
     .more {
       width: 200px;
@@ -191,10 +196,13 @@
 
 #research {
   .title-box {
+    position: absolute;
+    width: 300px;
     .btns {
       display: flex;
       width: 300px;
       justify-content: space-between;
+      margin-left: -30px;
       .btn {
         display: flex;
         font-size: 18px;
@@ -214,6 +222,43 @@
         &:after {
           content: "\f061";
           font-family: "FontAwesome";
+        }
+      }
+    }
+  }
+  .banner {
+    overflow: hidden;
+    width: 100vw;
+    .mask {
+      margin-left: 400px;
+      overflow: hidden;
+      li {
+        .img-box {
+          height: 300px;
+          @include flex;
+          border: 1px solid #ccc;
+          background-color: #fff;
+          img {
+            height: 60px;
+          }
+        }
+        .txt-box {
+          h3 {
+            font-size: $h4;
+            padding: 20px 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ccc;
+            @include ellipsis;
+          }
+          .date {
+            display: flex;
+            justify-content: space-between;
+            i {
+              color: $main-color;
+              font-size: 24px;
+              margin-left: 10px;
+            }
+          }
         }
       }
     }

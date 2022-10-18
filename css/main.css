@@ -150,8 +150,12 @@
   transform: translateY(-50%);
 }
 
+.section {
+  padding: 200px 0;
+}
 .section .title-box h2 {
-  font-size: 36px;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 .section .title-box h2 strong {
   font-weight: 700;
@@ -159,6 +163,9 @@
 .section .title-box p {
   font-size: 17px;
   color: #666;
+  word-break: keep-all;
+  margin-bottom: 30px;
+  line-height: 1.5;
 }
 .section .title-box .more {
   width: 200px;
@@ -179,10 +186,15 @@
   display: block;
 }
 
+#research .title-box {
+  position: absolute;
+  width: 300px;
+}
 #research .title-box .btns {
   display: flex;
   width: 300px;
   justify-content: space-between;
+  margin-left: -30px;
 }
 #research .title-box .btns .btn {
   display: flex;
@@ -200,6 +212,43 @@
 #research .title-box .btns .btn-next:after {
   content: "\f061";
   font-family: "FontAwesome";
+}
+#research .banner {
+  overflow: hidden;
+  width: 100vw;
+}
+#research .banner .mask {
+  margin-left: 400px;
+  overflow: hidden;
+}
+#research .banner .mask li .img-box {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+#research .banner .mask li .img-box img {
+  height: 60px;
+}
+#research .banner .mask li .txt-box h3 {
+  font-size: 20px;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+#research .banner .mask li .txt-box .date {
+  display: flex;
+  justify-content: space-between;
+}
+#research .banner .mask li .txt-box .date i {
+  color: #0467b3;
+  font-size: 24px;
+  margin-left: 10px;
 }
 
 /*
