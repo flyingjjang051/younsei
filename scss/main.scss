@@ -3,10 +3,11 @@
 @import "vars";
 @import "mixins";
 #main-visual {
-  background-image: url("../images/main/bg_main_visual.jpg");
-  background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
+  background-image: url("../images/main/bg_main_visual.jpg");
+  background-position: 0 100%;
+  background-repeat: no-repeat;
   .mask {
     width: 1280px;
     height: 850px;
@@ -15,12 +16,13 @@
     bottom: 0;
     overflow: hidden;
     border-radius: 100px 0 0 0;
+
     .main-mask {
       height: 100%;
     }
     li {
-      height: 100%;
       width: 100%;
+      height: 100%;
       background-repeat: no-repeat;
       background-size: cover;
     }
@@ -35,12 +37,12 @@
     }
   }
   > .contents {
-    color: #fff;
+    width: 100%;
     //margin-top: 500px; // 만약 부모의 첫번째 자식요소가  margin을 가지면 여백을 생성시킨다. 이때 부모에게 overflow:hidden을 주면 원상 복구된다.
     position: absolute;
     bottom: 150px;
-    width: 100%;
     z-index: 2;
+    color: #fff;
     user-select: none;
     .title {
       font-size: 68px;
@@ -52,10 +54,10 @@
     .pagination {
       margin-top: 50px;
       .swiper-pagination-bullet {
+        width: 60px;
+        height: 4px;
         opacity: 1;
         border-radius: 0;
-        height: 4px;
-        width: 60px;
         background-color: #fff;
         &-active {
           background-color: $point-color;
@@ -63,18 +65,18 @@
       }
     }
     .news-and-notice {
-      margin-top: 200px;
       display: flex;
       justify-content: space-between;
+      margin-top: 200px;
     }
     .news {
       width: 350px;
       word-break: keep-all;
       h3 {
-        font-size: $h3;
-        border-bottom: 1px solid #fff;
         margin-bottom: 30px;
         padding-bottom: 30px;
+        font-size: $h3;
+        border-bottom: 1px solid #fff;
       }
       .desc {
         line-height: 1.5;
@@ -86,10 +88,10 @@
     .notice {
       width: 820px;
       .title-box {
-        color: #fff;
         display: flex;
         justify-content: space-between;
         margin-bottom: 30px;
+        color: #fff;
         h2 {
           font-size: 24px;
           font-weight: 500;
@@ -97,26 +99,26 @@
         }
       }
       .contents {
-        background-color: #fff;
-        color: #111;
-        padding: 20px;
         position: relative;
+        padding: 20px;
+        color: #111;
+        background-color: #fff;
         li {
           display: flex;
           align-items: center;
         }
         .date {
+          flex-direction: column;
           width: 80px;
           height: 80px;
-          background-color: $point-color;
+          overflow: hidden;
           margin-right: 30px;
-          color: #fff;
           font-weight: 700;
           text-align: center;
-          flex-direction: column;
+          color: #fff;
+          background-color: $point-color;
           @include flex;
           @include longShadow(50, darken($point-color, 30));
-          overflow: hidden;
           .num {
             display: block;
             font-size: 48px;
@@ -124,32 +126,117 @@
         }
         .txt {
           h3 {
-            font-size: $h3 - 2px;
             margin-bottom: 10px;
+            font-size: $h3 - 2px;
           }
         }
         .btns {
           position: absolute;
-          right: 30px;
           top: 50%;
-          transform: translateY(-50%);
+          right: 30px;
           z-index: 2;
+          transform: translateY(-50%);
           i {
             font-size: 20px;
           }
         }
         .fraction-pagination {
-          position: absolute;
-          left: auto;
-          right: 120px;
-          top: 50%;
-          transform: translateY(-50%);
           width: auto;
+          position: absolute;
+          top: 50%;
+          right: 120px;
           bottom: auto;
+          left: auto;
           font-size: 20px;
           font-weight: 700;
+          transform: translateY(-50%);
         }
       }
     }
   }
+}
+
+.section {
+  .title-box {
+    h2 {
+      font-size: $h2;
+      strong {
+        font-weight: 700;
+      }
+    }
+    p {
+      font-size: 17px;
+      color: #666;
+    }
+    .more {
+      width: 200px;
+      height: 60px;
+      display: flex;
+      box-sizing: border-box;
+      background-color: $main-color;
+      color: #fff;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 30px;
+      font-weight: 700;
+      font-size: 14px;
+      &:after {
+        content: "\f061";
+        font-family: "FontAwesome";
+        display: block;
+      }
+    }
+  }
+}
+
+#research {
+  .title-box {
+    .btns {
+      display: flex;
+      width: 300px;
+      justify-content: space-between;
+      .btn {
+        display: flex;
+        font-size: 18px;
+        font-weight: 700;
+        width: 140px;
+        height: 50px;
+        padding: 0 30px;
+        justify-content: space-between;
+      }
+      .btn-prev {
+        &:before {
+          content: "\f060";
+          font-family: "FontAwesome";
+        }
+      }
+      .btn-next {
+        &:after {
+          content: "\f061";
+          font-family: "FontAwesome";
+        }
+      }
+    }
+  }
+}
+
+/*
+@media all and (max-width: 1280px) {
+  
+}
+
+@media all and (max-width: 640px) {
+  #header {
+    #logo {
+      display: none;
+    }
+    #gnb {
+      .list {
+        flex-direction: column;
+      }
+    }
+  }
+}
+*/
+#research {
 }
