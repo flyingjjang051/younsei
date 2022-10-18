@@ -177,6 +177,7 @@
                       </div>
                     </li>
                   </ul>
+                  <div class="fraction-pagination"></div>
                   <div class="btns">
                     <button class="btn btn-prev"><i class="fa-solid fa-chevron-left"></i></button>
                     <button class="btn btn-next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -188,6 +189,7 @@
         </div>
       </div>
     </div>
+    <!-- main visual end -->
     <section id="notice"></section>
     <section id="news"></section>
 
@@ -221,6 +223,10 @@
         fadeEffect: {
           crossFade: true,
         },
+        pagination: {
+          el: "#main-visual .notice-mask .fraction-pagination",
+          type: "fraction",
+        },
         navigation: {
           prevEl: "#main-visual .notice-mask .btn-prev",
           nextEl: "#main-visual .notice-mask .btn-next",
@@ -239,6 +245,17 @@
         },
       });
       //gsap.from();
+      //document.querySelector("#vid").disablePictureInPicture = true;
+      const header = document.querySelector("#header");
+      window.addEventListener("scroll", function () {
+        //console.log("스크롤이 되고 있습니다.");
+        //console.log(window.scrollY);
+        if (window.scrollY > 0) {
+          header.classList.add("on");
+        } else {
+          header.classList.remove("on");
+        }
+      });
     </script>
   </body>
 </html>

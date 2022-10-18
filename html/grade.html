@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label><span>키</span><input type="text" id="height" placeholder="키를 입력하세요. ex)180" /></label>
+    <label><span>몸무게</span><input type="text" id="weight" placeholder="몸무게를 입력하세요. ex)78" /></label>
+    <button id="btn-result">결과보기</button>
+    <p id="result"></p>
+    <script>
+      const inputHeight = document.querySelector("#height");
+      const inputWeight = document.querySelector("#weight");
+      const btnResult = document.querySelector("#btn-result");
+      const result = document.querySelector("#result");
+      btnResult.addEventListener("click", function () {
+        let height = inputHeight.value;
+        let weight = inputWeight.value;
+        let meterHeight = height / 100;
+        let bmi = weight / meterHeight ** 2;
+        console.log(bmi);
+        result.textContent = bmi;
+        if (bmi > 23) {
+          console.log("비만");
+          result.textContent = "비만";
+        } else if (bmi < 18.5) {
+          console.log("저체중");
+          result.textContent = "저제충";
+        } else {
+          console.log("정상");
+          result.textContent = "정상";
+        }
+      });
+    </script>
+  </body>
+</html>
