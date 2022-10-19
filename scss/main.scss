@@ -165,6 +165,7 @@
       margin-bottom: 30px;
       strong {
         font-weight: 700;
+        color: $main-color;
       }
     }
     p {
@@ -197,6 +198,19 @@
 
 #research {
   overflow: hidden;
+  position: relative;
+  &:before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 800px;
+    height: 800px;
+    background-color: #ccc;
+    border-radius: 0 0 100px 0;
+    //border-bottom-right-radius: 100px;
+  }
   .title-box {
     position: absolute;
     width: 300px;
@@ -261,6 +275,91 @@
               margin-left: 10px;
             }
           }
+        }
+      }
+    }
+  }
+}
+
+#fund {
+  .fund-list {
+    border-top: 4px solid #111;
+    li {
+      padding: 30px;
+      border-bottom: 1px solid #ccc;
+      .main {
+        cursor: pointer;
+      }
+      &.on {
+        .main {
+          display: none;
+        }
+        .contents {
+          display: flex;
+        }
+      }
+      .main {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+        p {
+          display: flex;
+          align-items: center;
+          &:before {
+            content: "";
+            display: block;
+            width: 4px;
+            height: 4px;
+            background-color: $main-color;
+            margin-right: 15px;
+          }
+        }
+        .date {
+          &:before {
+            content: "\f017";
+            display: inline-block;
+            font-family: "FontAwesome";
+            margin-right: 10px;
+          }
+        }
+      }
+      .contents {
+        display: none;
+        align-items: center;
+        .date {
+          width: 100px;
+          height: 100px;
+          background-color: $main-color;
+          color: #fff;
+          flex-direction: column;
+          @include flex;
+          border-radius: 10px;
+          font-size: 20px;
+          font-weight: 700;
+          overflow: hidden;
+          @include longShadow(60, darken($main-color, 10));
+          strong {
+            font-size: $h1;
+          }
+        }
+        a {
+          font-size: 18px;
+          padding: 0 0 0 25px;
+          &:hover {
+            text-decoration: underline;
+          }
+          .title {
+            font-size: $h4;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          .desc {
+            opacity: 0.5;
+          }
+        }
+        .img-box {
+          margin-left: auto;
         }
       }
     }

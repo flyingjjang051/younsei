@@ -301,7 +301,93 @@
         </div>
       </div>
     </section>
-    <section id="news"></section>
+    <section id="fund" class="section">
+      <div class="container">
+        <div class="title-box">
+          <h2>연세대학교 이과대학 <strong>발전기금</strong></h2>
+        </div>
+        <div class="fund-list">
+          <ul>
+            <li>
+              <div class="main">
+                <p>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                <span class="date">2020. 10. 19</span>
+              </div>
+              <div class="contents">
+                <div class="date">
+                  <span>2022. 10</span>
+                  <strong>19</strong>
+                </div>
+                <a href="" class="txt">
+                  <p class="title">김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                  <p class="desc">대기과학과 김준 교수가 2021년 3월 17일에 이과대학 발전기금 일천만원을 기탁했다.</p>
+                </a>
+                <div class="img-box">
+                  <img src="https://picsum.photos/300/200" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="main">
+                <p>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                <span class="date">2020. 10. 19</span>
+              </div>
+              <div class="contents">
+                <div class="date">
+                  <span>2022. 10</span>
+                  <strong>19</strong>
+                </div>
+                <a href="" class="txt">
+                  <p class="title">김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                  <p class="desc">대기과학과 김준 교수가 2021년 3월 17일에 이과대학 발전기금 일천만원을 기탁했다.</p>
+                </a>
+                <div class="img-box">
+                  <img src="https://picsum.photos/300/200" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="main">
+                <p>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                <span class="date">2020. 10. 19</span>
+              </div>
+              <div class="contents">
+                <div class="date">
+                  <span>2022. 10</span>
+                  <strong>19</strong>
+                </div>
+                <a href="" class="txt">
+                  <p class="title">김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                  <p class="desc">대기과학과 김준 교수가 2021년 3월 17일에 이과대학 발전기금 일천만원을 기탁했다.</p>
+                </a>
+                <div class="img-box">
+                  <img src="https://picsum.photos/300/200" alt="" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="main">
+                <p>김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                <span class="date">2020. 10. 19</span>
+              </div>
+              <div class="contents">
+                <div class="date">
+                  <span>2022. 10</span>
+                  <strong>19</strong>
+                </div>
+                <a href="" class="txt">
+                  <p class="title">김준 교수(대기과학) 이과대학 발전기금 5백만원 기탁</p>
+                  <p class="desc">대기과학과 김준 교수가 2021년 3월 17일에 이과대학 발전기금 일천만원을 기탁했다.</p>
+                </a>
+                <div class="img-box">
+                  <img src="https://picsum.photos/300/200" alt="" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <script>
       Splitting();
@@ -383,6 +469,34 @@
       // gnb.addEventListener("mouseleave", function () {
       //   header.classList.remove("full");
       // });
+
+      const now = new Date();
+      const date = now.getDate();
+      const day = now.getDay();
+      const month = now.getMonth();
+      console.log("🚀 ~ file: index.html ~ line 477 ~ month", month);
+
+      const days = ["일", "월", "화", "수", "목", "금", "토"];
+      const months = ["Feb", "Apr", "", "", "", "", "", "", "", "Oct"];
+      console.log(days[day]);
+      console.log(months[month]);
+      // if (day === 0) {
+      //   console.log("일요일");
+      // } else if (day === 1) {
+      //   console.log("화요일");
+      // }
+      console.log("🚀 ~ file: index.html ~ line 475 ~ date", date);
+
+      const fundList = document.querySelectorAll(".fund-list li");
+
+      for (let i = 0; i < 4; i++) {
+        fundList[i].addEventListener("click", function () {
+          for (let j = 0; j < 4; j++) {
+            fundList[j].classList.remove("on");
+          }
+          fundList[i].classList.add("on");
+        });
+      }
     </script>
   </body>
 </html>

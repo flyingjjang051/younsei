@@ -160,6 +160,7 @@
 }
 .section .title-box h2 strong {
   font-weight: 700;
+  color: #0467b3;
 }
 .section .title-box p {
   font-size: 17px;
@@ -189,6 +190,18 @@
 
 #research {
   overflow: hidden;
+  position: relative;
+}
+#research:before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 800px;
+  height: 800px;
+  background-color: #ccc;
+  border-radius: 0 0 100px 0;
 }
 #research .title-box {
   position: absolute;
@@ -253,6 +266,87 @@
   color: #0467b3;
   font-size: 24px;
   margin-left: 10px;
+}
+
+#fund .fund-list {
+  border-top: 4px solid #111;
+}
+#fund .fund-list li {
+  padding: 30px;
+  border-bottom: 1px solid #ccc;
+}
+#fund .fund-list li .main {
+  cursor: pointer;
+}
+#fund .fund-list li.on .main {
+  display: none;
+}
+#fund .fund-list li.on .contents {
+  display: flex;
+}
+#fund .fund-list li .main {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 500;
+}
+#fund .fund-list li .main p {
+  display: flex;
+  align-items: center;
+}
+#fund .fund-list li .main p:before {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #0467b3;
+  margin-right: 15px;
+}
+#fund .fund-list li .main .date:before {
+  content: "\f017";
+  display: inline-block;
+  font-family: "FontAwesome";
+  margin-right: 10px;
+}
+#fund .fund-list li .contents {
+  display: none;
+  align-items: center;
+}
+#fund .fund-list li .contents .date {
+  width: 100px;
+  height: 100px;
+  background-color: #0467b3;
+  color: #fff;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  font-size: 20px;
+  font-weight: 700;
+  overflow: hidden;
+  text-shadow: 1px 1px 0px #034a81,2px 2px 0px #034a81,3px 3px 0px #034a81,4px 4px 0px #034a81,5px 5px 0px #034a81,6px 6px 0px #034a81,7px 7px 0px #034a81,8px 8px 0px #034a81,9px 9px 0px #034a81,10px 10px 0px #034a81,11px 11px 0px #034a81,12px 12px 0px #034a81,13px 13px 0px #034a81,14px 14px 0px #034a81,15px 15px 0px #034a81,16px 16px 0px #034a81,17px 17px 0px #034a81,18px 18px 0px #034a81,19px 19px 0px #034a81,20px 20px 0px #034a81,21px 21px 0px #034a81,22px 22px 0px #034a81,23px 23px 0px #034a81,24px 24px 0px #034a81,25px 25px 0px #034a81,26px 26px 0px #034a81,27px 27px 0px #034a81,28px 28px 0px #034a81,29px 29px 0px #034a81,30px 30px 0px #034a81,31px 31px 0px #034a81,32px 32px 0px #034a81,33px 33px 0px #034a81,34px 34px 0px #034a81,35px 35px 0px #034a81,36px 36px 0px #034a81,37px 37px 0px #034a81,38px 38px 0px #034a81,39px 39px 0px #034a81,40px 40px 0px #034a81,41px 41px 0px #034a81,42px 42px 0px #034a81,43px 43px 0px #034a81,44px 44px 0px #034a81,45px 45px 0px #034a81,46px 46px 0px #034a81,47px 47px 0px #034a81,48px 48px 0px #034a81,49px 49px 0px #034a81,50px 50px 0px #034a81,51px 51px 0px #034a81,52px 52px 0px #034a81,53px 53px 0px #034a81,54px 54px 0px #034a81,55px 55px 0px #034a81,56px 56px 0px #034a81,57px 57px 0px #034a81,58px 58px 0px #034a81,59px 59px 0px #034a81,60px 100px 0px #034a81;
+}
+#fund .fund-list li .contents .date strong {
+  font-size: 48px;
+}
+#fund .fund-list li .contents a {
+  font-size: 18px;
+  padding: 0 0 0 25px;
+}
+#fund .fund-list li .contents a:hover {
+  text-decoration: underline;
+}
+#fund .fund-list li .contents a .title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+#fund .fund-list li .contents a .desc {
+  opacity: 0.5;
+}
+#fund .fund-list li .contents .img-box {
+  margin-left: auto;
 }
 
 /*
