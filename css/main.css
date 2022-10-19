@@ -4,6 +4,7 @@
   background-image: url("../images/main/bg_main_visual.jpg");
   background-position: 0 100%;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 #main-visual .mask {
   width: 1280px;
@@ -186,6 +187,9 @@
   display: block;
 }
 
+#research {
+  overflow: hidden;
+}
 #research .title-box {
   position: absolute;
   width: 300px;

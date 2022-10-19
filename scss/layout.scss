@@ -31,7 +31,9 @@ button {
   top: 0;
   color: #fff;
   transition: all 0.5s ease;
-  &.on {
+  height: 100px;
+  &.on,
+  &.full {
     background-color: #fff;
     color: #111;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.15);
@@ -41,6 +43,34 @@ button {
       }
       #logo-color {
         display: block;
+      }
+    }
+  }
+  &.full {
+    height: 400px;
+    overflow: hidden;
+    #gnb .list .depth01 {
+      transition: none;
+    }
+    #gnb .list .depth02 {
+      transition: none;
+      border-radius: 0;
+      li {
+        transition: none;
+      }
+    }
+    #gnb .list > li:hover .depth02 {
+      background-color: $main-color;
+      color: #fff;
+    }
+    #gnb .list .depth02 {
+      opacity: 1;
+      pointer-events: auto;
+      height: 300px;
+      background-color: #fff;
+      color: #111;
+      li {
+        opacity: 1;
       }
     }
   }

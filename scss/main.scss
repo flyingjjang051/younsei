@@ -8,6 +8,7 @@
   background-image: url("../images/main/bg_main_visual.jpg");
   background-position: 0 100%;
   background-repeat: no-repeat;
+  background-size: cover;
   .mask {
     width: 1280px;
     height: 850px;
@@ -195,6 +196,7 @@
 }
 
 #research {
+  overflow: hidden;
   .title-box {
     position: absolute;
     width: 300px;
