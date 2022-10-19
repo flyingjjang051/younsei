@@ -366,6 +366,160 @@
   }
 }
 
+.btn-top {
+  position: fixed;
+  right: 50px;
+  bottom: -200px;
+  width: 60px;
+  height: 60px;
+  background-color: $main-color;
+  color: #fff;
+  font-size: 18px;
+  border-radius: 10px;
+  @include flex;
+  z-index: 999;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.15);
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.25s ease;
+  &.on {
+    bottom: 50px;
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+#about {
+  background: url("../images/main/bg_main_about.jpg") no-repeat 50%;
+  background-size: cover;
+  color: #fff;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .title-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h2 {
+      font-weight: 900;
+      font-size: $h2 + 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.5);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+      padding: 30px 0;
+    }
+    p {
+      color: #fff;
+      font-size: 20px;
+    }
+    .since {
+      font-weight: 900;
+      opacity: 0.5;
+      font-size: 20px;
+    }
+  }
+  .organization {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      width: 650px;
+      li {
+        width: calc(33.33% - 10px);
+        margin: 5px;
+        a {
+          background-color: rgba(255, 255, 255, 0.1);
+          font-size: $h4;
+          font-weight: 500;
+          height: 150px;
+          display: block;
+          padding: 20px;
+          box-sizing: border-box;
+          position: relative;
+          line-height: 1.25;
+          transition: all 0.25s ease;
+          &:hover {
+            background-color: rgba(255, 255, 255, 1);
+            background-image: url("../images/main/bg_watermark.png");
+            background-repeat: no-repeat;
+            color: $main-color;
+            &:before {
+              opacity: 1;
+            }
+          }
+          &:before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 3px;
+            background-color: $point-color;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            transition: all 0.25s ease;
+          }
+          &:after {
+            content: "\f055";
+            font-family: "FontAwesome";
+            font-size: 20px;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+#department {
+  .contents-box {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    .contents {
+      width: calc(50% - 40px);
+      .title {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        border-bottom: 3px solid #000;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        h3 {
+          font-size: $h3;
+          color: $main-color;
+        }
+      }
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -10px;
+        li {
+          width: calc(33.33% - 20px);
+          margin: 10px;
+          a {
+            @include flex;
+            flex-direction: column;
+            height: 180px;
+            border: 1px solid #ccc;
+
+            img {
+              width: 100px;
+            }
+            span {
+              margin-top: 20px;
+              font-weight: 500;
+              font-size: $h4;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
 /*
 @media all and (max-width: 1280px) {
   
