@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="btn">+</button>
+    <script>
+      const pi = 3.14;
+      let age = 30;
+      age = 31;
+      console.log(pi);
+      console.log(age);
+      //scope  block scope
+      let msg = "당신은 미성년자가 아닙니다.";
+      if (age > 20) {
+        let msg = "나는 블럭 안에 선언된 msg변수입니다.";
+        console.log(msg);
+      }
+      //1+2+3+4+5
+      let sum = 0;
+      for (let i = 0; i <= 100; i++) {
+        sum = sum + i;
+      }
+      console.log(sum);
+      const btn = document.querySelector(".btn");
+      let sum02 = 0;
+      btn.addEventListener("click", function () {
+        sum02 = sum02 + 10;
+        console.log(sum02);
+      });
+    </script>
+  </body>
+</html>

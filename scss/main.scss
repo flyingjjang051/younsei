@@ -528,6 +528,7 @@
     justify-content: space-between;
   }
   .title-box {
+    position: relative;
     h2 {
       strong {
         color: #fff;
@@ -535,6 +536,22 @@
     }
     p {
       color: #fff;
+    }
+    .control {
+      display: flex;
+      align-items: center;
+    }
+    .pagination {
+      position: relative;
+      height: 4px;
+      width: 50%;
+      margin: 0 20px;
+    }
+    .swiper-pagination-progressbar {
+      background: rgba(255, 255, 255, 0.5);
+    }
+    .swiper-pagination-progressbar-fill {
+      background: #fff;
     }
   }
   .banner {

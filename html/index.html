@@ -561,6 +561,18 @@
             세계적 수준의 대학원 육성과 우수한 연구인력 양성을 위한 <br />
             연세대학교 이과대학의 끊임없는 노력
           </p>
+          <div class="control">
+            <div class="fraction"><span class="current">01</span> / 04</div>
+            <div class="pagination"></div>
+            <div class="btns">
+              <button class="btn btn-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+              </button>
+              <button class="btn btn-next">
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
         </div>
         <div class="banner">
           <div class="mask">
@@ -606,6 +618,7 @@
     <script>
       Splitting();
       AOS.init();
+      const current = document.querySelector("#community .fraction .current");
       const newsSlider = new Swiper("#main-visual .news", {
         loop: true,
         effect: "fade",
@@ -652,22 +665,25 @@
           nextEl: "#research .btn-next",
         },
       });
-
       new Swiper("#community .mask", {
         effect: "fade",
+        loop: true,
         navigation: {
           prevEl: "#community .btn-prev",
           nextEl: "#community .btn-next",
+        },
+        pagination: {
+          el: "#community .pagination",
+          type: "progressbar",
         },
         on: {
           init: function () {
             console.log("swiper initialized");
           },
           slideChange: function (swiper) {
-            console.log(swiper.activeIndex);
-            const idx = swiper.activeIndex;
+            const idx = swiper.realIndex;
             const list = document.querySelectorAll("#community .link li");
-            console.log(list);
+            current.textContent = "0" + (idx + 1);
             for (let i = 0; i < 4; i++) {
               list[i].classList.remove("on");
             }

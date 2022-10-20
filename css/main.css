@@ -511,11 +511,30 @@
   display: flex;
   justify-content: space-between;
 }
+#community .title-box {
+  position: relative;
+}
 #community .title-box h2 strong {
   color: #fff;
 }
 #community .title-box p {
   color: #fff;
+}
+#community .title-box .control {
+  display: flex;
+  align-items: center;
+}
+#community .title-box .pagination {
+  position: relative;
+  height: 4px;
+  width: 50%;
+  margin: 0 20px;
+}
+#community .title-box .swiper-pagination-progressbar {
+  background: rgba(255, 255, 255, 0.5);
+}
+#community .title-box .swiper-pagination-progressbar-fill {
+  background: #fff;
 }
 #community .banner {
   position: relative;
