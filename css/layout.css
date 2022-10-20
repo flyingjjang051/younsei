@@ -34,7 +34,7 @@ button {
   top: 0;
   color: #fff;
   transition: all 0.5s ease;
-  height: 100px;
+  height: 120px;
 }
 #header.on, #header.full {
   background-color: #fff;
@@ -224,6 +224,91 @@ button {
 #header .util .all-menu {
   font-size: 24px;
   margin-left: 40px;
+}
+
+#footer {
+  background-color: #222;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 70px 0;
+}
+#footer .container {
+  width: 1840px;
+  position: relative;
+}
+#footer .addr-box {
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+  position: relative;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+#footer .addr-box .logo {
+  margin-bottom: 30px;
+}
+#footer .addr-box .logo img {
+  width: 250px;
+}
+#footer .addr-box .tel {
+  margin-top: 20px;
+}
+#footer .addr-box .tel .fax {
+  margin-left: 50px;
+}
+#footer .addr-box .tel strong {
+  font-weight: 700;
+}
+#footer .addr-box .family-site {
+  position: absolute;
+  right: 0;
+  bottom: 30px;
+}
+#footer .util-box {
+  display: flex;
+  justify-content: space-between;
+}
+#footer .util-box .util {
+  display: flex;
+}
+#footer .util-box .util li:nth-child(2) {
+  margin-left: 30px;
+  color: #fff;
+}
+#footer .util-box .copyright {
+  font-size: 14px;
+}
+
+.family-site {
+  font-size: 14px;
+  position: relative;
+}
+.family-site button,
+.family-site li a {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  color: #fff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1a1a1a;
+  border-color: #4d4d4d;
+}
+.family-site ul {
+  position: absolute;
+  bottom: 40px;
+  margin-bottom: -1px;
+  opacity: 0;
+  transition: all 0.25s ease;
+  pointer-events: none;
+}
+.family-site ul li {
+  margin-top: -1px;
+}
+.family-site.on ul {
+  pointer-events: auto;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 video::-webkit-media-controls-fullscreen-button {
