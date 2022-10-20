@@ -502,6 +502,56 @@
   font-size: 20px;
 }
 
+#community {
+  background: url("../images/main/bg_main_community.jpg") no-repeat 50%;
+  background-size: cover;
+  color: #fff;
+}
+#community .container {
+  display: flex;
+  justify-content: space-between;
+}
+#community .title-box h2 strong {
+  color: #fff;
+}
+#community .title-box p {
+  color: #fff;
+}
+#community .banner {
+  position: relative;
+}
+#community .mask {
+  width: 580px;
+  margin-top: -300px;
+}
+#community .link {
+  position: absolute;
+  left: -250px;
+  bottom: 100px;
+  z-index: 2;
+}
+#community .link ul li {
+  margin: 10px 0;
+}
+#community .link ul li:hover a, #community .link ul li.on a {
+  background-color: #fff;
+  color: #0467b3;
+  border-left-color: #ffc240;
+}
+#community .link ul li a {
+  display: flex;
+  height: 60px;
+  width: 330px;
+  align-items: center;
+  background-color: #022e4f;
+  color: #fff;
+  padding-left: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  transition: all 0.5s ease;
+  border-left: 5px solid transparent;
+}
+
 /*
 @media all and (max-width: 1280px) {
 

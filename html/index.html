@@ -548,6 +548,56 @@
         </div>
       </div>
     </section>
+    <!-- department end -->
+
+    <section id="community" class="section">
+      <div class="container">
+        <div class="title-box">
+          <h2>
+            연세대학교 이과대학 <br />
+            <strong>BK21+ 교육연구단</strong>
+          </h2>
+          <p>
+            세계적 수준의 대학원 육성과 우수한 연구인력 양성을 위한 <br />
+            연세대학교 이과대학의 끊임없는 노력
+          </p>
+        </div>
+        <div class="banner">
+          <div class="mask">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img src="../images/main/main_community_img1.png" alt="" />
+              </li>
+              <li class="swiper-slide">
+                <img src="../images/main/main_community_img2.png" alt="" />
+              </li>
+              <li class="swiper-slide">
+                <img src="../images/main/main_community_img3.png" alt="" />
+              </li>
+              <li class="swiper-slide">
+                <img src="../images/main/main_community_img4.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="link">
+            <ul>
+              <li class="on">
+                <a href="">01.연세 수리과학 및 계산 교육연구단</a>
+              </li>
+              <li>
+                <a href="">02.연세 물리 교육연구단</a>
+              </li>
+              <li>
+                <a href="">03.지속가능 화학 교육연구단</a>
+              </li>
+              <li>
+                <a href="">04.지구 · 대기 · 천문 교육연구단</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <button class="btn-top">
       <i class="fa-solid fa-arrow-up-long"></i>
@@ -600,6 +650,30 @@
         navigation: {
           prevEl: "#research .btn-prev",
           nextEl: "#research .btn-next",
+        },
+      });
+
+      new Swiper("#community .mask", {
+        effect: "fade",
+        navigation: {
+          prevEl: "#community .btn-prev",
+          nextEl: "#community .btn-next",
+        },
+        on: {
+          init: function () {
+            console.log("swiper initialized");
+          },
+          slideChange: function (swiper) {
+            console.log(swiper.activeIndex);
+            const idx = swiper.activeIndex;
+            const list = document.querySelectorAll("#community .link li");
+            console.log(list);
+            for (let i = 0; i < 4; i++) {
+              list[i].classList.remove("on");
+            }
+            const selectedItem = document.querySelector(`#community .link li:nth-child(${idx + 1})`);
+            selectedItem.classList.add("on");
+          },
         },
       });
 
