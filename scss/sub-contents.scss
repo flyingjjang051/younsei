@@ -1,0 +1,39 @@
+@import "vars";
+@import "mixins";
+
+#sub-visual {
+  height: 550px;
+  background: url("../images/main/bg_main_visual.jpg") no-repeat;
+  background-size: cover;
+  padding-top: 120px;
+  box-sizing: border-box;
+  display: flex;
+  overflow: hidden;
+  .container {
+    display: flex;
+    position: relative;
+  }
+  .sub-title {
+    font-size: $h1;
+    color: #fff;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    span {
+      display: block;
+      padding-bottom: 20px;
+      border-bottom: 5px solid $point-color;
+    }
+  }
+  .bg {
+    position: absolute;
+    height: 430px;
+    max-width: 1280px;
+    width: calc(100vw - 400px);
+    left: 400px;
+    bottom: 0;
+    border-radius: 100px 0 0 0;
+    background: url("../images/sub-contents/about_visual.jpg") no-repeat;
+    background-size: cover;
+  }
+}
