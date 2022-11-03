@@ -34,3 +34,52 @@
   background: url("../images/sub-contents/about_visual.jpg") no-repeat;
   background-size: cover;
 }
+
+#lnb {
+  background-color: #0467b3;
+  color: #fff;
+}
+#lnb .container {
+  display: flex;
+  height: 65px;
+}
+#lnb .container .home {
+  width: 65px;
+  background: url("../images/sub-contents/icon_home.png") no-repeat 50%;
+  overflow: hidden;
+  text-indent: -999px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+}
+#lnb .container .lnb-box {
+  width: 300px;
+  font-size: 16px;
+  font-weight: 500;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  position: relative;
+}
+#lnb .container .lnb-box > a {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  height: 65px;
+}
+#lnb .container .lnb-box ul {
+  position: absolute;
+  background-color: #fff;
+  width: 100%;
+  display: none;
+  box-shadow: 0 10px 10px 5px rgba(0, 0, 0, 0.15);
+}
+#lnb .container .lnb-box ul a {
+  height: 65px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  color: #111;
+  border-top: 1px solid #fff;
+  transition: all 0.25s ease;
+}
+#lnb .container .lnb-box ul a:hover {
+  background-color: #0467b3;
+  color: #fff;
+}

@@ -1,31 +1,28 @@
-const header = document.querySelector("#header");
-const gnb = document.querySelector("#gnb");
-const btnTop = document.querySelector(".btn-top");
-window.addEventListener("scroll", function () {
-  //console.log("스크롤이 되고 있습니다.");
-  //console.log(window.scrollY);
-  if (window.scrollY > 0) {
-    header.classList.add("on");
+const header = $("#header");
+const gnb = $("#gnb");
+const btnTop = $(".btn-top");
+$(window).on("scroll", function () {
+  if ($(window).scrollTop() > 0) {
+    header.addClass("on");
   } else {
-    header.classList.remove("on");
+    header.removeClass("on");
   }
-  if (window.scrollY > 500) {
-    btnTop.classList.add("on");
+  if ($(window).scrollTop() > 500) {
+    btnTop.addClass("on");
   } else {
-    btnTop.classList.remove("on");
+    btnTop.removeClass("on");
   }
 });
-// gnb.addEventListener("mouseenter", function () {
-//   header.classList.add("full");
-// });
-// gnb.addEventListener("mouseleave", function () {
-//   header.classList.remove("full");
-// });
-
-btnTop.addEventListener("click", function () {
+btnTop.on("click", function () {
   gsap.to(window, { scrollTo: 100, duration: 1 });
 });
 
-document.querySelector(".family-site button").addEventListener("click", function () {
-  document.querySelector(".family-site").classList.toggle("on");
+$(".family-site button").on("click", function () {
+  $(".family-site").toggleClass("on");
+});
+const lnbMenu = $("#lnb .lnb-box > a");
+lnbMenu.on("click", function (e) {
+  e.preventDefault();
+  const siblings = $(this).next();
+  siblings.stop().slideToggle();
 });
