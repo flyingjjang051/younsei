@@ -29,3 +29,8 @@
   $shadow: unquote($shadow);
   text-shadow: $shadow;
 }
+
+@mixin icon($code) {
+  content: $code;
+  font-family: "FontAwesome";
+}
