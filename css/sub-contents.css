@@ -248,8 +248,78 @@
   margin: 0 5px;
   font-size: 20px;
   font-weight: 500;
+  cursor: pointer;
 }
 .history .scroll-menu ul li.on {
   background-color: #0467b3;
   color: #fff;
+}
+.history .history-list ul {
+  padding: 50px 0;
+  margin: 50px 0;
+  position: relative;
+}
+.history .history-list ul:before {
+  content: "";
+  display: block;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  background-color: #ccc;
+}
+.history .history-list ul li {
+  display: flex;
+  margin: 50px 0;
+}
+.history .history-list ul li:nth-child(odd) {
+  justify-content: flex-end;
+}
+.history .history-list ul li:nth-child(odd) img {
+  left: auto;
+  right: 0;
+}
+.history .history-list ul li:nth-child(even) {
+  text-align: right;
+}
+.history .history-list ul li:nth-child(even) .year-box .year:before {
+  left: auto;
+  right: -55px;
+}
+.history .history-list ul li .year-box {
+  width: 50%;
+  padding: 0 50px;
+  box-sizing: border-box;
+  color: #999;
+}
+.history .history-list ul li .year-box .year {
+  display: block;
+  font-size: 36px;
+  font-weight: 500;
+  margin-bottom: 20px;
+  color: #111;
+  position: relative;
+}
+.history .history-list ul li .year-box .year:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 100px;
+  border: 3px solid #0467b3;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -55px;
+  position: absolute;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+.history .history-list ul li img {
+  position: absolute;
+  left: 0;
+}
+.history .chairman-list {
+  background-color: #f00;
+  min-height: 500px;
+  margin-top: 100px;
 }
