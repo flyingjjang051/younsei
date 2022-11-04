@@ -31,8 +31,16 @@
   left: 400px;
   bottom: 0;
   border-radius: 100px 0 0 0;
-  background: url("../images/sub-contents/about_visual.jpg") no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
+}
+
+.sub-visual01 .bg {
+  background-image: url("../images/sub-contents/about_visual.jpg");
+}
+
+.sub-visual05 .bg {
+  background-image: url("../images/sub-contents/community_visual.jpg");
 }
 
 #lnb {
@@ -341,13 +349,11 @@
   flex-grow: 1;
   margin-left: 100px;
 }
-.history .chairman-list .list ul,
-.history .chairman-list02 .list ul {
+.history .chairman-list .list ul {
   display: flex;
   flex-wrap: wrap;
 }
-.history .chairman-list .list ul li,
-.history .chairman-list02 .list ul li {
+.history .chairman-list .list ul li {
   box-sizing: border-box;
   width: calc(25% - 10px);
   margin: 5px;
@@ -356,19 +362,44 @@
   text-align: center;
   padding: 30px 0;
 }
-.history .chairman-list .list ul li .name,
-.history .chairman-list02 .list ul li .name {
+.history .chairman-list .list ul li .name {
   color: #0467b3;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 20px;
 }
-.history .chairman-list .list ul li .period:before,
-.history .chairman-list02 .list ul li .period:before {
+.history .chairman-list .list ul li .period:before {
   content: "";
   display: block;
   width: 30px;
   height: 1px;
   margin: 30px auto;
   background-color: #0467b3;
+}
+.history .chairman-list02 .list {
+  display: table;
+  border-top: 2px solid #111;
+}
+.history .chairman-list02 .list ul {
+  display: table-row-group;
+}
+.history .chairman-list02 .list ul li {
+  display: table-row;
+}
+.history .chairman-list02 .list ul li span {
+  display: table-cell;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+  padding: 0 20px;
+  text-align: center;
+  border-right: 1px solid #eee;
+}
+.history .chairman-list02 .list ul li span.name {
+  width: 100px;
+}
+.history .chairman-list02 .list ul li span.position {
+  width: 300px;
+}
+.history .chairman-list02 .list ul li span.period {
+  border-right: none;
 }

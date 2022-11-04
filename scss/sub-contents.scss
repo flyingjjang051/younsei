@@ -33,9 +33,15 @@
     left: 400px;
     bottom: 0;
     border-radius: 100px 0 0 0;
-    background: url("../images/sub-contents/about_visual.jpg") no-repeat;
+    background-repeat: no-repeat;
     background-size: cover;
   }
+}
+.sub-visual01 .bg {
+  background-image: url("../images/sub-contents/about_visual.jpg");
+}
+.sub-visual05 .bg {
+  background-image: url("../images/sub-contents/community_visual.jpg");
 }
 
 #lnb {
@@ -279,6 +285,10 @@
     .list {
       flex-grow: 1;
       margin-left: 100px;
+    }
+  }
+  .chairman-list {
+    .list {
       ul {
         display: flex;
         flex-wrap: wrap;
@@ -304,6 +314,38 @@
               height: 1px;
               margin: 30px auto;
               background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  .chairman-list02 {
+    .list {
+      display: table;
+      border-top: 2px solid #111;
+      ul {
+        display: table-row-group;
+        li {
+          display: table-row;
+          &:nth-child(even) {
+            //background-color: #eee;
+          }
+          span {
+            display: table-cell;
+            border-bottom: 1px solid #eee;
+            vertical-align: middle;
+            padding: 0 20px;
+            text-align: center;
+            border-right: 1px solid #eee;
+            &.name {
+              width: 100px;
+            }
+            &.position {
+              width: 300px;
+            }
+            &.period {
+              border-right: none;
             }
           }
         }

@@ -19,6 +19,7 @@ button {
   border: none;
   outline: none;
   color: inherit;
+  font-family: inherit;
 }
 
 .container {
