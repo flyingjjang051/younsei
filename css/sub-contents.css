@@ -318,8 +318,57 @@
   position: absolute;
   left: 0;
 }
-.history .chairman-list {
-  background-color: #f00;
+.history .chairman-list,
+.history .chairman-list02 {
   min-height: 500px;
-  margin-top: 100px;
+  padding-top: 100px;
+  display: flex;
+}
+.history .chairman-list h4,
+.history .chairman-list02 h4 {
+  font-size: 36px;
+  font-weight: 300;
+  flex-shrink: 0;
+  width: 180px;
+}
+.history .chairman-list h4 strong,
+.history .chairman-list02 h4 strong {
+  font-weight: 700;
+  color: #0467b3;
+}
+.history .chairman-list .list,
+.history .chairman-list02 .list {
+  flex-grow: 1;
+  margin-left: 100px;
+}
+.history .chairman-list .list ul,
+.history .chairman-list02 .list ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.history .chairman-list .list ul li,
+.history .chairman-list02 .list ul li {
+  box-sizing: border-box;
+  width: calc(25% - 10px);
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  padding: 30px 0;
+}
+.history .chairman-list .list ul li .name,
+.history .chairman-list02 .list ul li .name {
+  color: #0467b3;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.history .chairman-list .list ul li .period:before,
+.history .chairman-list02 .list ul li .period:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  margin: 30px auto;
+  background-color: #0467b3;
 }

@@ -261,9 +261,53 @@
       }
     }
   }
-  .chairman-list {
-    background-color: #f00;
+  .chairman-list,
+  .chairman-list02 {
     min-height: 500px;
-    margin-top: 100px;
+    padding-top: 100px;
+    display: flex;
+    h4 {
+      font-size: $h2;
+      font-weight: 300;
+      flex-shrink: 0;
+      width: 180px;
+      strong {
+        font-weight: 700;
+        color: $main-color;
+      }
+    }
+    .list {
+      flex-grow: 1;
+      margin-left: 100px;
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        li {
+          box-sizing: border-box;
+          width: calc(25% - 10px);
+          margin: 5px;
+          border: 1px solid #ccc;
+          border-radius: 10px;
+          text-align: center;
+          padding: 30px 0;
+          .name {
+            color: $main-color;
+            font-size: $h3;
+            font-weight: 700;
+            margin-bottom: 20px;
+          }
+          .period {
+            &:before {
+              content: "";
+              display: block;
+              width: 30px;
+              height: 1px;
+              margin: 30px auto;
+              background-color: $main-color;
+            }
+          }
+        }
+      }
+    }
   }
 }
